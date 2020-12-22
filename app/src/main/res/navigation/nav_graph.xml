@@ -1,0 +1,28 @@
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/photoListFragment">
+
+    <fragment
+        android:id="@+id/photoListFragment"
+        android:name="com.example.pixabyimagesearch.ui.PhotoListFragment"
+        android:label="PhotoListFragment"
+        tools:layout="@layout/fragment_photo_list">
+
+        <action
+            android:id="@+id/showPhoto"
+            app:destination="@id/photoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/photoDetailFragment"
+        android:name="com.example.pixabyimagesearch.ui.PhotoDetailFragment"
+        android:label="PhotoDetailFragment"
+        tools:layout="@layout/fragment_photo_detail">
+        <argument
+            android:name="photoId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
